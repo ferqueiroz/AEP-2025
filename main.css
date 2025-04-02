@@ -1,0 +1,16 @@
+body {
+    background-color: #f4f4f4;
+    overflow: hidden;
+}
+
+#mapa{
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 52px);
+}
+
+.form-control{
+    width: 300px;
+}
