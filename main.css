@@ -11,6 +11,29 @@ body {
     height: calc(100% - 52px);
 }
 
+#sugestoes {
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    display: none;
+    width: 200px;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+}
+
+#sugestoes li {
+    padding: 5px;
+    cursor: pointer;
+}
+  
+#sugestoes li:hover {
+    background-color: #f0f0f0;
+}
+
 .form-control{
     width: 300px;
 }
