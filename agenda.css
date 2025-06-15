@@ -1,0 +1,15 @@
+.card-body{
+    display: flex;
+    flex-direction: column;
+    margin: 4%;
+    gap: 15px;
+}
+
+.data{
+    width: 130px;
+}
+
+.agendar{
+    margin-top: 15px;
+    width: 100px;
+}

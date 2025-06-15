@@ -14,6 +14,7 @@ const postos = [
 		endereco: "Av. Padre Max Kaufman, Jardim Cristina",
         horario: "Segunda a Sexta",
         horarioDetalhado: "das 7:30h as 17h",
+        horarioEspera: "7 minutos de espera",
         telefone: "(44) 3133-0655"
     },
     {
@@ -24,6 +25,7 @@ const postos = [
 		endereco: "Av. Padre Max Kaufman, Jardim Cristina,",
         horario: "Segunda a Sexta",
         horarioDetalhado: "das 7:30h as 17h",
+        horarioEspera: "5 minutos de espera",
         telefone: "(44) 3133-0655"
     },
     {
@@ -34,6 +36,7 @@ const postos = [
 		endereco: "R. Elías Alexandre, S/N - Parque Industrial,",
         horario: "Segunda a Domingo",
         horarioDetalhado: "Aberto 24 horas",
+        horarioEspera: "17 minutos de espera",
         telefone: "(44) 3233-7032"
     },
     {
@@ -44,6 +47,7 @@ const postos = [
 		endereco: "R. Duque de Caxias, 50 - Jardim Esplanada,",
         horario: "Segunda a Sexta",
         horarioDetalhado: "das 7:30 as 17:00",
+        horarioEspera: "10 minutos de espera",
         telefone: "(44) 3233-7032"
 	},
     {
@@ -54,6 +58,7 @@ const postos = [
 		endereco: "R. Padre Antônio Lock, 382 - Centro,",
         horario: "Segunda a Sexta",
         horarioDetalhado: "das 7:30 as 17:00",
+        horarioEspera: "12 minutos de espera",
         telefone: "(44) 3233-2982"
 	},
     {
@@ -64,6 +69,7 @@ const postos = [
 		endereco: "Av. Pres. Vargas, 480 - Centro,",
         horario: "Segunda a Sexta",
         horarioDetalhado: "das 7:00 as 17:00",
+        horarioEspera: "15 minutos de espera",
         telefone: "(44) 3233-1050"
 	},
     {
@@ -74,6 +80,7 @@ const postos = [
 		endereco: "R. Antonio M Da Silva, 26 - Novo Horizonte,",
         horario: "Segunda a Sexta",
         horarioDetalhado: "das 7:30 as 22:00",
+        horarioEspera: "4 minutos de espera",
         telefone: "(44) 3233-6051"
 	},
     {
@@ -84,11 +91,10 @@ const postos = [
 		endereco: "R. Jorge Hamessi - Vila Vitoria,",
         horario: "Segunda a Sexta",
         horarioDetalhado: "das 7:30 as 17:00",
+        horarioEspera: "3 minutos de espera",
         telefone: "(44) 3233-5086"
 	},
 ]
-
-const opcoes = ["UBS Jardim Progresso", "UBS Jardim Morumbi", "Pronto Atendimento Municipal", "UBS Jardim Esplanada", "UBS Centro", "Hospital Cristo Rei", "UBS Jardim Boa Vista", "UBS Vila Vitoria"];
 
 const marcadores = {};
 
@@ -105,7 +111,7 @@ postos.forEach((posto) => {
                     <path d='M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10'/>
                     <path d='M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6'/>     
                 </svg>
-                <a style='margin-left: 15px;'>${posto.endereco}</a><br><a style='margin-left: 31px;'> Mandaguari - PR, 86975-000</a>
+                <a style='margin-left: 15px;'>${posto.endereco}</a><br><a style='margin-left: 34px;'>Mandaguari - PR, 86975-000</a>
             </div>
 
             <div style='padding-top: 10px;'>
@@ -113,7 +119,14 @@ postos.forEach((posto) => {
                     <path d='M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z'/>
                     <path d='M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0'/>                  
                 </svg>
-                <a style='margin-left: 15px;'>${posto.horario}</a><br><a style='margin-left: 31px'>${posto.horarioDetalhado}</a>
+                <a style='margin-left: 15px;'>${posto.horario}</a><br><a style='margin-left: 34px'>${posto.horarioDetalhado}</a>
+            </div>
+
+            <div style='padding-top: 10px; '>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hourglass" viewBox="0 0 16 16">
+                    <path d="M2 1.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1h-11a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1-.5-.5m2.5.5v1a3.5 3.5 0 0 0 1.989 3.158c.533.256 1.011.791 1.011 1.491v.702c0 .7-.478 1.235-1.011 1.491A3.5 3.5 0 0 0 4.5 13v1h7v-1a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351v-.702c0-.7.478-1.235 1.011-1.491A3.5 3.5 0 0 0 11.5 3V2z"/>
+                </svg>
+                <a style='margin-left: 15px;'>${posto.horarioEspera}</a>
             </div>
 
             <div style='padding-top: 10px;'>
@@ -121,6 +134,10 @@ postos.forEach((posto) => {
                     <path d='M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z'/>
                 </svg>
                 <a style='margin-left: 15px;'>${posto.telefone}</a>
+            </div>
+            
+            <div style='padding-top: 20px;'>
+                <a href="agenda.html" rel="noopener noreferrer" class="btn btn-secondary text-light">Fazer agendamento</a>
             </div>`
         );
 
@@ -167,7 +184,7 @@ function filtrarSugestoes(sugestao) {
 function abrirPopUp(){
     if (marcadores[input.value]) {
         marcadores[input.value].openPopup();
-        map.setView(marcadores[input.value].getLatLng(), 17);
+        map.setView(marcadores[input.value].getLatLng(), 15);
     }
 }
 
