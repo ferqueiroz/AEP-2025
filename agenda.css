@@ -1,3 +1,7 @@
+.fundo{
+    background-color: aqua;
+}
+
 .card-body{
     display: flex;
     flex-direction: column;
